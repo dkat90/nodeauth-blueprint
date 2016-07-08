@@ -1,1 +1,2 @@
-# A simple and very basic node user authentication blueprint to use.
+# NodeAuthentication Blueprint
+1. A very basic nodeauthentication blueprint.
