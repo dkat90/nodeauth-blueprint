@@ -9,7 +9,8 @@ var passport = require('passport');
 var expressValidator = require('express-validator');
 var LocalStrategy = require('passport-local').Strategy;
 var multer = require('multer');
-var uploads = multer({dest:'./uplods'});
+//multer handles fiil uploads
+var uploads = multer({dest:'./uploads'});
 var flash = require('connect-flash');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
