@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
-var expressValidator = require('express-validator');
 var LocalStrategy = require('passport-local').Strategy;
+var expressValidator = require('express-validator');
 var multer = require('multer');
 //multer handles fiil uploads
 var uploads = multer({dest:'./uploads'});
@@ -74,6 +74,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('*', function(req, res, next){
+  res.locals.user = req.user || null;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);
